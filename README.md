@@ -13,6 +13,11 @@ slot is 32 bytes, even 2 bytes would give us 200 years.
 
 Since this contract is of last resort, we don't need to worry about gas cost of external calls.
 We also reduce gas cost by allowing anyone to update and any contract to access onchain.
+The typical use-case for this contract is if an owner is inactive for 10 years, start a process
+to assign a new owner. How the new owner is decided is completely up to the contracts that rely on this.
+This is different from other deadman contracts that also have a built-in beneficiary transfer.
+Everyone is going to have a different process but they will all require a timestamp to initiate.
+That's the main purpose of this contract.
 
 The main purpose of this is to recognize the differences between the digital and physical world.
 Although all things do perish eventually in the physical world, I would argue we lose just as
