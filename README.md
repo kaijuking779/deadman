@@ -23,8 +23,14 @@ The main purpose of this is to recognize the differences between the digital and
 Although all things do perish eventually in the physical world, I would argue we lose just as
 much in the digital world for the same reasons: taking things for granted.
 
-One of the strongest cases for this contract is for NFTs. As the number of NFTs in a collection
-decreases, it starts to lose it's diversity and ecosystem. Although we can argue a smaller
+Most common use case is for contract owner where the tokenURI might need to be updated eventually.
+If the multisig wasn't assigned properly, this would allow recovery in some way.
+
+Although this is mostly to handle contract ownership, it *can* be useful for managing individual NFT ownership.
+As the number of NFTs in a collection decreases, it starts to lose it's diversity and ecosystem. Although we can argue a smaller
 set might be better for a collection, it should be decreased using a burn mechanic instead of
 "unexpected accidents of a collector" which has no meaning. Like launching gold into space just
 to increase the price of gold.
+
+For ERC20 balance, this contract should NOT be used since it offers little to no benefit for most
+especially if the token is inflationary.
